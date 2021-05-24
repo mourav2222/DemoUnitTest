@@ -23,7 +23,7 @@ class MyTestCase(unittest.TestCase):
         self.cal.a = self.a
         self.cal.b = self.b
 
-    @pytest.skip
+    @pytest.mark.skip
     def test_add_param(self):
         self.assertAlmostEqual(self.cal.add(), self.expected_sum, delta=1)
 
