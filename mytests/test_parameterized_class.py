@@ -1,5 +1,8 @@
 import unittest
 import sys
+
+import pytest
+
 sys.path.append(".")
 sys.path.insert(0, '..\\')
 from calculator.simplecalculator import Calculator
@@ -20,6 +23,7 @@ class MyTestCase(unittest.TestCase):
         self.cal.a = self.a
         self.cal.b = self.b
 
+    @pytest.mark.skip
     def test_add_param(self):
         self.assertAlmostEqual(self.cal.add(), self.expected_sum, delta=1)
 
